@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
-import hero_1 from "../assets/hero_1.jpg";
+import hero_1 from "../assets/hero_1.webp";
 
-import hero_3 from "../assets/hero_3.jpg";
+import hero_3 from "../assets/hero_3.webp";
 
 const images = [
   hero_1,
-
   hero_3,
 
   "https://img.freepik.com/premium-photo/serene-spa-experience-with-aromatherapy_121111-937.jpghttps://img.freepik.com/premium-photo/ai-generative-beautiful-woman-undergoing-therapy-bathing-treatment-spa-studio_536047-5075.jpg",
