@@ -1,6 +1,6 @@
 import ServiceCard from "./ServiceCard";
 import thaimsg1 from "../assets/thaimssg1.webp";
-import chocmsg1 from "../assets/chocmssg1.webp";
+
 import wineVodka1 from "../assets/wineVodka1.webp";
 import bodyPol1 from "../assets/bodyPol1.webp";
 import ubtan1 from "../assets/ubtan1.webp";
@@ -61,7 +61,9 @@ const Services = () => {
     },
     {
       title: "Chocolate Massage",
-      images: [chocmsg1], // Reference local image correctly
+      images: [
+        "https://th.bing.com/th/id/R.abea7d4761b28d14682dec341bd66167?rik=aga7An8M8fH95g&riu=http%3a%2f%2fwww.meleluz.com.br%2fwp-content%2fuploads%2f2014%2f10%2fchocolate_massage.jpg&ehk=rnYWzQqkjcO4loR2xuvJXIu7AgnT9sofoIgy%2b7DpoG8%3d&risl=&pid=ImgRaw&r=0",
+      ], // Reference local image correctly
       price: "₹3,500",
       description:
         "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",

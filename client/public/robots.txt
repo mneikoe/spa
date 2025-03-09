@@ -1,0 +1,12 @@
+# Allow all robots to crawl the entire site
+User-agent: *
+Disallow: /admin/       # Prevent crawlers from accessing admin pages
+Disallow: /login/       # Prevent crawlers from accessing login pages
+Disallow: /checkout/    # Prevent crawlers from accessing checkout page if it’s sensitive
+
+# Block specific bots (optional, if needed)
+User-agent: Googlebot
+Disallow: /private-data/
+
+# Sitemap Location
+Sitemap: https://sukoonspa.in/sitemap.xml
