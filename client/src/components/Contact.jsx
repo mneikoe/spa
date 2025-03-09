@@ -29,7 +29,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappNumber = "9111021231"; // Replace with your WhatsApp number
+    const whatsappNumber = "9826451565"; // Replace with your WhatsApp number
     const serviceName = serviceOptions[formData.service] || formData.service;
 
     const message = encodeURIComponent(

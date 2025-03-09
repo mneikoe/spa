@@ -14,7 +14,8 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
           <div className="flex items-center space-x-2 mb-4">
-            <FaSpa className="text-gold text-2xl" />
+            <img className="w-8 " src="/awards_17828691.png" alt="" />
+
             <h2 className="text-2xl font-bold">
               Sukoon<span className="text-rose-400">Spa</span>
             </h2>
@@ -51,15 +52,15 @@ const Footer = () => (
           <ul className="space-y-2 text-gray-400">
             <li className="flex items-center">
               <FaMapMarkerAlt className="mr-2 text-gold" />
-              123 Relaxation Avenue, Bhopal
+              Sector A, Indrapuri, Bhopal
             </li>
             <li className="flex items-center">
               <FaPhone className="mr-2 text-gold" />
-              +91 9876543210
+              +91 9826451565
             </li>
             <li className="flex items-center">
               <FaEnvelope className="mr-2 text-gold" />
-              info@luxuryspa.com
+              sukoonspa.in@gmail.com
             </li>
           </ul>
         </div>
@@ -83,11 +84,7 @@ const Footer = () => (
                 Services
               </a>
             </li>
-            <li>
-              <a href="#gallery" className="hover:text-gold transition-colors">
-                Gallery
-              </a>
-            </li>
+
             <li>
               <a href="#contact" className="hover:text-gold transition-colors">
                 Contact

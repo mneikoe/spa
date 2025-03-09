@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FaSpa } from "react-icons/fa";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +23,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <FaSpa className="text-amber-200 text-2xl" />
+            <img className="w-8" src="/awards_17828691.png" alt="" />
             <h1 className="text-2xl font-bold text-white whitespace-nowrap">
               Sukoon<span className="text-rose-400">Spa</span>
             </h1>

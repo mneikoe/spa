@@ -1,4 +1,14 @@
 import ServiceCard from "./ServiceCard";
+import thaimsg1 from "../assets/thaimssg1.webp";
+import thaimsg2 from "../assets/thaimssg2.webp";
+import chocmsg1 from "../assets/chocmssg1.webp";
+import chocmsg2 from "../assets/chocmssg2.webp";
+import wineVodka1 from "../assets/wineVodka1.webp";
+import wineVodka2 from "../assets/wineVodka2.webp";
+import bodyPol1 from "../assets/bodyPol1.webp";
+import bodyPol2 from "../assets/bodyPol2.webp";
+import ubtan1 from "../assets/ubtan1.webp";
+import ubtan2 from "../assets/ubtan2.webp";
 
 const Services = () => {
   const services = [
@@ -57,6 +67,51 @@ const Services = () => {
       images: [
         "https://inspiredayspa.com/wp-content/uploads/2017/05/Inspire-Day-Spa-Packages.jpg",
         "https://media.istockphoto.com/id/1262423480/photo/romantic-date-in-spa-salon-with-relaxing-massage.jpg?s=612x612&w=0&k=20&c=eMigkxiHdKvYlKgWqfH7aPJ09Sph8eDUGfWJPwIvI8k=",
+      ],
+      price: "₹5,500",
+      description:
+        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+    },
+    {
+      title: "Chocolate Massage",
+      images: [chocmsg1, chocmsg2],
+      price: "₹3,500",
+      description:
+        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+    },
+    {
+      title: "Wine & Vodka Massage",
+      images: [wineVodka1, wineVodka2],
+      price: "₹3,500",
+      description:
+        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+    },
+    {
+      title: "Body Polishing",
+      images: [bodyPol1, bodyPol2],
+      price: "₹5,500",
+      description:
+        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+    },
+    {
+      title: "Ubtan Massage",
+      images: [ubtan1, ubtan2],
+      price: "₹5,500",
+      description:
+        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+    },
+    {
+      title: "Thai Massage",
+      images: [thaimsg1, thaimsg2],
+      price: "₹5,500",
+      description:
+        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+    },
+    {
+      title: "Potli Massage",
+      images: [
+        "https://images.onlymyhealth.com/imported/images/2023/August/17_Aug_2023/potli-massage-therapy.jpg",
+        "https://img.freepik.com/premium-photo/ayurvedic-massage-with-kizhi-herbal-bags-made-from-various-dried-herbs-wrapped-cotton_1048944-9494730.jpg",
       ],
       price: "₹5,500",
       description:
