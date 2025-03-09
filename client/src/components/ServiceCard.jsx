@@ -1,77 +1,79 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ServiceCard = ({ title, description, images, price }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [preloadedImages, setPreloadedImages] = useState([]);
+  const [inView, setInView] = useState(false);
 
-  // Preload images on component mount
-  useEffect(() => {
-    const preloadImages = images.map((src) => {
-      const img = new Image();
-      img.src = src;
-      return img;
+  // Intersection Observer to detect if the component is in view
+  const handleIntersection = useCallback((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setInView(true);
+        observer.unobserve(entry.target);
+      }
     });
-    setPreloadedImages(preloadImages);
-  }, [images]);
+  }, []);
 
-  // Auto-rotate images with optimized timer
   useEffect(() => {
-    let timeout;
-    const scheduleChange = () => {
-      timeout = setTimeout(() => {
-        setCurrentImageIndex((prev) => (prev + 1) % images.length);
-        scheduleChange();
-      }, 3000);
-    };
-    scheduleChange();
-    return () => clearTimeout(timeout);
-  }, [images.length]);
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5, // Trigger when 50% of the element is in view
+    });
 
-  // Manual image change with immediate feedback
-  const handleImageChange = (index) => {
-    setCurrentImageIndex(index);
-  };
+    const cardElement = document.getElementById(title);
+    if (cardElement) {
+      observer.observe(cardElement);
+    }
 
-  // Keep existing WhatsApp booking functionality
+    return () => observer.disconnect();
+  }, [handleIntersection, title]);
+
   const handleWhatsAppBooking = () => {
-    // ... (existing WhatsApp booking code)
-  };
+    const rawNumber = "9826451565";
+    const countryCode = "91";
+    const phoneNumber = `${countryCode}${rawNumber.replace(/\D/g, "")}`;
 
+    const message = `Hi SukoonSpa! I want to book the ${title} service (${price}).\nPlease let me know available slots.`;
+    const encodedMessage = encodeURIComponent(message);
+
+    // Check if user is on mobile or desktop
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const whatsappURL = isMobile
+      ? `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+    // Open the link programmatically
+    const link = document.createElement("a");
+    link.href = whatsappURL;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
-    <div className="bg-white rounded-xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 group">
+    <div
+      id={title} // Ensure unique ID for intersection observer
+      className="bg-white rounded-xl shadow-xl overflow-hidden transition-transform duration-300 hover:-translate-y-2 group"
+    >
       <div className="relative h-56 overflow-hidden">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`${title} - view ${index + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 transform-gpu ${
-              index === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
+        {inView && (
+          <LazyLoadImage
+            src={
+              typeof images[0] === "string"
+                ? images[0]
+                : URL.createObjectURL(images[0])
+            } // Check if it's a local image or URL
+            alt={`${title} - view 1`}
+            className="w-full h-full object-cover"
             loading="lazy"
             decoding="async"
-            onMouseEnter={() => handleImageChange(index)}
             style={{
               willChange: "opacity",
               backfaceVisibility: "hidden",
             }}
           />
-        ))}
-
-        {/* Image indicators */}
-        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleImageChange(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentImageIndex ? "bg-white w-4" : "bg-white/50"
-              }`}
-              aria-label={`View image ${index + 1}`}
-            />
-          ))}
-        </div>
+        )}
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent z-10" />
         <span className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded-full text-sm z-20">
