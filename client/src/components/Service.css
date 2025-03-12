@@ -1,0 +1,4 @@
+.lazy-image {
+  will-change: opacity;
+  backface-visibility: hidden;
+}

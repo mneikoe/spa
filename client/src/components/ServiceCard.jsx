@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /*import React, { useState, useEffect, useCallback } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import "./Service.css";
 const ServiceCard = ({ title, description, images, price }) => {
   const [inView, setInView] = useState(false);
 
@@ -47,6 +47,7 @@ const ServiceCard = ({ title, description, images, price }) => {
     link.href = whatsappURL;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
+    link.ariaLabel = `Book ${title} service via WhatsApp`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -65,13 +66,9 @@ const ServiceCard = ({ title, description, images, price }) => {
                 : URL.createObjectURL(images[0])
             } // Check if it's a local image or URL
             alt={`${title} - view 1`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover lazy-image"
             loading="lazy"
             decoding="async"
-            style={{
-              willChange: "opacity",
-              backfaceVisibility: "hidden",
-            }}
           />
         )}
 
@@ -86,6 +83,7 @@ const ServiceCard = ({ title, description, images, price }) => {
         <p className="text-gray-600 mb-4">{description}</p>
         <button
           onClick={handleWhatsAppBooking}
+          aria-label="Book your appointment via WhatsApp"
           className="w-full bg-gray-800 hover:bg-amber-500 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
         >
           WhatsApp
