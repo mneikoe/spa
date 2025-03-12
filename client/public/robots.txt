@@ -9,4 +9,5 @@ User-agent: Googlebot
 Disallow: /private-data/
 
 # Sitemap Location
+Allow: /
 Sitemap: https://sukoonspa.in/sitemap.xml
