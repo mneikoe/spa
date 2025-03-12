@@ -23,7 +23,13 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img className="w-8" src="/awards_17828691.png" alt="" />
+            <img
+              className="w-8"
+              src="/awards_17828691.png"
+              alt="brand logo"
+              // width="32" // Replace with actual width in pixels
+              // height="32" // Replace with actual height in pixels
+            />
             <h1 className="text-2xl font-bold text-white whitespace-nowrap">
               Sukoon<span className="text-rose-400">Spa</span>
             </h1>
@@ -37,6 +43,7 @@ const Header = () => {
                   <a
                     href={`#${item.toLowerCase()}`}
                     className="text-white hover:text-gold transition-colors duration-300 text-sm lg:text-base"
+                    aria-label={`visit ${item.toLowerCase()} page`}
                   >
                     {item}
                   </a>
@@ -49,6 +56,9 @@ const Header = () => {
           <button
             className="md:hidden text-white p-1"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={
+              mobileMenuOpen ? "Close mobile menu" : "Open mobile menu"
+            }
           >
             <svg
               className="w-6 h-6"
@@ -83,6 +93,7 @@ const Header = () => {
                     href={`#${item.toLowerCase()}`}
                     className="text-white hover:text-gold transition-colors duration-300 block text-sm"
                     onClick={() => setMobileMenuOpen(false)}
+                    aria-label={`visit ${item.toLowerCase()} page`}
                   >
                     {item}
                   </a>

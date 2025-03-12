@@ -1,3 +1,5 @@
+const bgImage =
+  "https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg";
 const About = () => (
   <section id="about" className="py-24 px-4 bg-gray-50">
     {" "}
@@ -8,13 +10,18 @@ const About = () => (
         <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
           {" "}
           <img
-            src="https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg"
-            alt="Luxury Spa Interior"
-            className="rounded-lg shadow-xl"
-            width="600"
-            height="400"
+            srcSet={`
+    ${bgImage.replace(".jpg", "-small.webp")} 480w,
+    ${bgImage.replace(".jpg", "-medium.webp")} 768w,
+    ${bgImage.replace(".jpg", "-large.webp")} 1200w
+  `}
+            sizes="(max-width: 600px) 480px, 
+         (max-width: 1200px) 768px, 
+         1200px"
+            src={bgImage}
+            alt="Spa Experience"
             loading="lazy"
-          />{" "}
+          />
         </div>{" "}
         <div className="md:w-1/2">
           {" "}

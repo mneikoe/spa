@@ -208,6 +208,7 @@ const Contact = () => {
 
               <button
                 type="submit"
+                aria-label="Book Appointment"
                 className="w-full bg-gray-800 hover:bg-gold text-white font-bold py-3 rounded-lg transition-colors duration-300"
               >
                 Book Appointment

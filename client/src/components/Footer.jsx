@@ -14,7 +14,13 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
           <div className="flex items-center space-x-2 mb-4">
-            <img className="w-8 " src="/awards_17828691.png" alt="" />
+            <img
+              className="w-8 "
+              // width="600"
+              // height="600"
+              src="/awards_17828691.png"
+              alt="Brand logo"
+            />
 
             <h2 className="text-2xl font-bold">
               Sukoon<span className="text-rose-400">Spa</span>
@@ -28,18 +34,21 @@ const Footer = () => (
             <a
               href="#"
               className="text-gray-400 hover:text-gold transition-colors duration-300"
+              aria-label="Facebook"
             >
               <FaFacebook size={24} />
             </a>
             <a
               href="#"
               className="text-gray-400 hover:text-gold transition-colors duration-300"
+              aria-label="Instagram"
             >
               <FaInstagram size={24} />
             </a>
             <a
               href="#"
               className="text-gray-400 hover:text-gold transition-colors duration-300"
+              aria-label="Twitter"
             >
               <FaTwitter size={24} />
             </a>
@@ -70,23 +79,39 @@ const Footer = () => (
           <h3 className="text-xl font-bold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-400">
             <li>
-              <a href="#home" className="hover:text-gold transition-colors">
+              <a
+                href="#home"
+                className="hover:text-gold transition-colors"
+                aria-label="Visit Home page"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className="hover:text-gold transition-colors">
+              <a
+                href="#about"
+                className="hover:text-gold transition-colors"
+                aria-label="Visit About page"
+              >
                 About Us
               </a>
             </li>
             <li>
-              <a href="#services" className="hover:text-gold transition-colors">
+              <a
+                href="#services"
+                className="hover:text-gold transition-colors"
+                aria-label="Visit Services page"
+              >
                 Services
               </a>
             </li>
 
             <li>
-              <a href="#contact" className="hover:text-gold transition-colors">
+              <a
+                href="#contact"
+                className="hover:text-gold transition-colors"
+                aria-label="Visit Contact page"
+              >
                 Contact
               </a>
             </li>
