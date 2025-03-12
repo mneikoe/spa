@@ -27,8 +27,8 @@ const Header = () => {
               className="w-8"
               src="/awards_17828691.png"
               alt="brand logo"
-              // width="32" // Replace with actual width in pixels
-              // height="32" // Replace with actual height in pixels
+              width="32" // Replace with actual width in pixels
+              height="32" // Replace with actual height in pixels
             />
             <h1 className="text-2xl font-bold text-white whitespace-nowrap">
               Sukoon<span className="text-rose-400">Spa</span>

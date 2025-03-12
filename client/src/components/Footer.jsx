@@ -16,8 +16,8 @@ const Footer = () => (
           <div className="flex items-center space-x-2 mb-4">
             <img
               className="w-8 "
-              // width="600"
-              // height="600"
+              width="600"
+              height="600"
               src="/awards_17828691.png"
               alt="Brand logo"
             />
