@@ -1,5 +1,13 @@
 const bgImage =
   "https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg";
+const bgImageJPG =
+  "https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg";
+const bgImageSmall =
+  "https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg"; // Replace with an actual small image URL if available
+const bgImageMedium =
+  "https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg"; // Replace with an actual medium image URL
+const bgImageLarge =
+  "https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg"; // Replace with an actual large image URL
 
 const About = () => (
   <section id="about" className="py-24 px-4 bg-gray-50">
@@ -8,22 +16,22 @@ const About = () => (
       <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
         <picture>
           <source
-            srcSet={bgImage.replace(".jpg", "-small.webp")}
+            srcSet={bgImageSmall}
             type="image/webp"
             media="(max-width: 480px)"
           />
           <source
-            srcSet={bgImage.replace(".jpg", "-medium.webp")}
+            srcSet={bgImageMedium}
             type="image/webp"
             media="(max-width: 768px)"
           />
           <source
-            srcSet={bgImage.replace(".jpg", "-large.webp")}
+            srcSet={bgImageLarge}
             type="image/webp"
             media="(max-width: 1200px)"
           />
           <img
-            src={bgImage}
+            src={bgImageJPG}
             alt="Spa Experience"
             className="w-full h-auto rounded-lg shadow-lg"
             loading="lazy"
