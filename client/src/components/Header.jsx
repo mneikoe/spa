@@ -26,6 +26,7 @@ const Header = () => {
             <img
               className="w-8"
               src="/awards_17828691.png"
+              aria-label="brand logo"
               alt="brand logo"
               width="32" // Replace with actual width in pixels
               height="32" // Replace with actual height in pixels

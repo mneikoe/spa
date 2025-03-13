@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   FaSpa,
   FaFacebook,
@@ -8,6 +8,7 @@ import {
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
+
 const Footer = () => (
   <footer className="bg-gray-900 text-white">
     <div className="container mx-auto py-12 px-4">
@@ -15,13 +16,14 @@ const Footer = () => (
         <div>
           <div className="flex items-center space-x-2 mb-4">
             <img
-              className="w-8 "
+              className="w-8"
               width="600"
               height="600"
+              aria-label="brand logo"
               src="/awards_17828691.png"
               alt="Brand logo"
+              loading="lazy"
             />
-
             <h2 className="text-2xl font-bold">
               Sukoon<span className="text-rose-400">Spa</span>
             </h2>
@@ -105,7 +107,6 @@ const Footer = () => (
                 Services
               </a>
             </li>
-
             <li>
               <a
                 href="#contact"
@@ -146,4 +147,4 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer;
+export default memo(Footer);

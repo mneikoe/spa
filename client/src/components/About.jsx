@@ -1,5 +1,3 @@
-const bgImage =
-  "https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg";
 const bgImageJPG =
   "https://img.freepik.com/premium-photo/cozy-spa-interior-pink-tones-with-soft-lighting-3d-illustration-ai-render_88188-2640.jpg";
 const bgImageSmall =
@@ -34,6 +32,8 @@ const About = () => (
             src={bgImageJPG}
             alt="Spa Experience"
             className="w-full h-auto rounded-lg shadow-lg"
+            width="400"
+            height="300"
             loading="lazy"
           />
         </picture>

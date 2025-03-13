@@ -97,7 +97,7 @@ export default ServiceCard;*/
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useCallback } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import "./Service.css";
 const ServiceCard = ({ id, title, description, images, price }) => {
   const [inView, setInView] = useState(false);
 
@@ -156,13 +156,9 @@ const ServiceCard = ({ id, title, description, images, price }) => {
           <LazyLoadImage
             src={images[0]}
             alt={`${title} - view 1`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover optimize-visibility"
             loading="lazy"
             decoding="async"
-            style={{
-              willChange: "opacity",
-              backfaceVisibility: "hidden",
-            }}
           />
         )}
 

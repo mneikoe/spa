@@ -1,27 +1,32 @@
-import React, { useState, useEffect } from "react";
-import SEO from "./components/SEO";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import React, { useState, useEffect, Suspense, lazy, memo } from "react";
+
+const Home = lazy(() => import("./components/Hero"));
+const About = lazy(() => import("./components/About"));
+const Services = lazy(() => import("./components/Services"));
+const Contact = lazy(() => import("./components/Contact"));
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
 
   useEffect(() => {
-    // You can detect the current section/page and update the title and description dynamically
-    // For now, we are simulating dynamic sections
+    let ticking = false;
+
     const handleScroll = () => {
-      if (window.scrollY < 500) {
-        setCurrentPage("home");
-      } else if (window.scrollY >= 500 && window.scrollY < 1500) {
-        setCurrentPage("about");
-      } else if (window.scrollY >= 1500 && window.scrollY < 2500) {
-        setCurrentPage("services");
-      } else {
-        setCurrentPage("contact");
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          if (scrollY < 500) {
+            setCurrentPage("home");
+          } else if (scrollY >= 500 && scrollY < 1500) {
+            setCurrentPage("about");
+          } else if (scrollY >= 1500 && scrollY < 2500) {
+            setCurrentPage("services");
+          } else {
+            setCurrentPage("contact");
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -29,56 +34,22 @@ const App = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Define meta data for each section dynamically
-  const seoData = {
-    home: {
-      title: "Welcome to Sukoon Spa",
-      description:
-        "Experience ultimate relaxation and rejuvenation at Sukoon Spa. Our signature therapies will calm your body and soul.",
-      url: "https://sukoonspa.in",
-      image: "https://sukoonspa.in/hero-image.jpg",
-    },
-    about: {
-      title: "About Sukoon Spa",
-      description:
-        "At Sukoon Spa, we offer a range of luxurious and therapeutic treatments designed to relax and rejuvenate you.",
-      url: "https://sukoonspa.in/about",
-      image: "https://sukoonspa.in/about-image.jpg",
-    },
-    services: {
-      title: "Our Services - Sukoon Spa",
-      description:
-        "Discover the wide range of services we offer, from aromatherapy to deep tissue massages. Choose what suits your needs best.",
-      url: "https://sukoonspa.in/services",
-      image: "https://sukoonspa.in/services-image.jpg",
-    },
-    contact: {
-      title: "Contact Sukoon Spa",
-      description:
-        "Get in touch with us for bookings and inquiries. We are always here to assist you with your spa needs.",
-      url: "https://sukoonspa.in/contact",
-      image: "https://sukoonspa.in/contact-image.jpg",
-    },
-  };
-
-  const currentSeoData = seoData[currentPage];
-
   return (
     <div>
-      <SEO
-        title={currentSeoData.title}
-        description={currentSeoData.description}
-        image={currentSeoData.image}
-        url={currentSeoData.url}
-      />
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<div>Loading Home...</div>}>
+        {currentPage === "home" && <Home />}
+      </Suspense>
+      <Suspense fallback={<div>Loading About...</div>}>
+        {currentPage === "about" && <About />}
+      </Suspense>
+      <Suspense fallback={<div>Loading Services...</div>}>
+        {currentPage === "services" && <Services />}
+      </Suspense>
+      <Suspense fallback={<div>Loading Contact...</div>}>
+        {currentPage === "contact" && <Contact />}
+      </Suspense>
     </div>
   );
 };
 
-export default App;
+export default memo(App);
