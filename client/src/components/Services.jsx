@@ -133,12 +133,12 @@ const Services = () => {
       icon: <FaSpa className="text-2xl text-emerald-600" />,
     },
   ];
-  const handleServiceScroll = (images) => {
-    const id = images.toLowerCase().replace(/ /g, "-");
+  const handleServiceScroll = (title) => {
+    const id = title.toLowerCase().replace(/ /g, "-");
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setSelectedService(images);
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      setSelectedService(title);
     }
   };
   return (
@@ -155,7 +155,7 @@ const Services = () => {
           {services.map((service, index) => (
             <button
               key={index}
-              onClick={() => handleServiceScroll(service.images)}
+              onClick={() => handleServiceScroll(service.title)}
               className={`p-4 rounded-xl transition-all duration-300 flex flex-col items-center justify-center gap-2
                 ${
                   selectedService === service.title
