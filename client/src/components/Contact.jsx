@@ -85,15 +85,22 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center">
-                  <div className="bg-gray-800 p-3 rounded-full text-white mr-4">
-                    <FaPhone />
-                  </div>
+                  <a
+                    href="tel:+919826451565"
+                    className="hover:text-gold transition-colors"
+                    aria-label="Call us"
+                  >
+                    <div className="bg-gray-800 p-3 rounded-full text-white mr-4">
+                      <FaPhone />
+                    </div>
+                  </a>
                   <div>
-                    <h4 className="font-semibold">Phone</h4>
+                    <h4 className="font-semibold">
+                      Phone(Click the Icon to place call)
+                    </h4>
                     <p className="text-gray-600">+91 9826451565</p>
                   </div>
                 </div>
-
                 <div className="flex items-center">
                   <div className="bg-gray-800 p-3 rounded-full text-white mr-4">
                     <FaEnvelope />

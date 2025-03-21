@@ -67,7 +67,13 @@ const Footer = () => (
             </li>
             <li className="flex items-center">
               <FaPhone className="mr-2 text-gold" />
-              +91 9826451565
+              <a
+                href="tel:+919826451565"
+                className="hover:text-gold transition-colors"
+                aria-label="Call us"
+              >
+                +91 9826451565
+              </a>
             </li>
             <li className="flex items-center">
               <FaEnvelope className="mr-2 text-gold" />
