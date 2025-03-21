@@ -98,7 +98,7 @@ export default ServiceCard;*/
 import React, { useState, useEffect, useCallback } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Service.css";
-const ServiceCard = ({ id, title, description, images, price }) => {
+const ServiceCard = ({ id, title, duration, images, price }) => {
   const [inView, setInView] = useState(false);
 
   // Intersection Observer to detect if the component is in view
@@ -170,7 +170,7 @@ const ServiceCard = ({ id, title, description, images, price }) => {
 
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
+        <p className="text-gray-600 mb-4">{duration}</p>
         <button
           onClick={handleWhatsAppBooking}
           className="w-full bg-gray-800 hover:bg-amber-500 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"

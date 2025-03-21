@@ -63,7 +63,7 @@ const Footer = () => (
           <ul className="space-y-2 text-gray-400">
             <li className="flex items-center">
               <FaMapMarkerAlt className="mr-2 text-gold" />
-              Sector A, Indrapuri, Bhopal
+              123 Relaxation Avenue, MP Nagar.
             </li>
             <li className="flex items-center">
               <FaPhone className="mr-2 text-gold" />

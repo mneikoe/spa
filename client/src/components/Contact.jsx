@@ -79,7 +79,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold">Location</h4>
                     <p className="text-gray-600">
-                      123 Relaxation Avenue, MP Nagar, Bhopal, India
+                      123 Relaxation Avenue, MP Nagar.
                     </p>
                   </div>
                 </div>

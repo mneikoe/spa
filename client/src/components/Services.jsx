@@ -18,6 +18,11 @@ import {
   FaBroom,
   FaCannabis,
   FaMugHot,
+  FaAirFreshener,
+  FaBed,
+  FaCentercode,
+  FaCentos,
+  FaCloudscale,
 } from "react-icons/fa";
 
 const Services = () => {
@@ -28,8 +33,8 @@ const Services = () => {
       images: [
         "https://sutherapycentre.com.au/wp-content/uploads/2021/11/Aroma-massage-scaled.jpg",
       ],
-      price: "₹2,500",
-      description: "Experience the healing power of essential oils...",
+      price: "₹2,000",
+      duration: "60 min",
       icon: <FaLeaf className="text-2xl text-emerald-600" />,
     },
     {
@@ -37,47 +42,44 @@ const Services = () => {
       images: [
         "https://images.squarespace-cdn.com/content/v1/609b733baea691347db710d4/86be2cfc-aa38-473e-8aa8-0cb4b0d73536/CPY_Therapy_CSMassage.jpg?format=750w",
       ],
-      price: "₹3,000",
-      description:
-        "Relieve chronic muscle tension with firm pressure and slow strokes that reach deeper layers of muscle and fascia.",
+      price: "₹2,200",
+      duration: "60 min",
       icon: <FaHeart className="text-2xl text-emerald-600" />,
     },
     {
-      title: "Luxury Facial Treatment",
+      title: "Sports Massage",
       images: [
-        "https://blog.californiaskincaresupply.com/wp-content/uploads/2022/04/man-beard-get-facial-1024x684.jpg",
+        "https://www.a-gentle-touch.co.uk/wp-content/uploads/2020/09/Sports-Massage-scaled.jpeg",
       ],
-      price: "₹2,800",
-      description:
-        "Revitalize your skin with our premium facial that cleanses, exfoliates, and hydrates for a youthful glow.",
+      price: "₹2,000",
+      duration: "30 min",
       icon: <FaHotTub className="text-2xl text-emerald-600" />,
     },
     {
-      title: "Hot Stone Therapy",
+      title: "Thai Foot Massage",
       images: [
-        "https://img.grouponcdn.com/deal/g8JjckFez5dfRPwLXcju/jq-6143x3686/v1/c700x420.jpg",
+        "https://bestchoicemassageco.com/wp-content/uploads/2018/11/545341285.jpg",
       ],
-      price: "₹3,500",
-      description:
-        "Smooth basalt stones are heated and placed on key points of the body to melt away tension and promote deep relaxation.",
+      price: "₹3,000",
+      duration: "30 min",
       icon: <FaSun className="text-2xl text-emerald-600" />,
     },
     {
-      title: "Ayurvedic Treatment",
-      images: ["https://wallpaperaccess.com/full/713698.jpg"],
-      price: "₹4,000",
-      description:
-        "Traditional Indian healing techniques to balance mind, body, and spirit using herbal oils and specific massage strokes.",
+      title: "Head Massage",
+      images: [
+        "https://blog.californiaskincaresupply.com/wp-content/uploads/2022/04/man-beard-get-facial-1024x684.jpg",
+      ],
+      price: "₹1,500",
+      duration: "20 min",
       icon: <FaBroom className="text-2xl text-emerald-600" />,
     },
     {
-      title: "Couple's Retreat Package",
+      title: "Swedish Massage",
       images: [
-        "https://media.istockphoto.com/id/1262423480/photo/romantic-date-in-spa-salon-with-relaxing-massage.jpg?s=612x612&w=0&k=20&c=eMigkxiHdKvYlKgWqfH7aPJ09Sph8eDUGfWJPwIvI8k=",
+        "https://sunwellness.ca/wp-content/uploads/2019/09/RMT-Massage-Toronto.jpg",
       ],
-      price: "₹5,500",
-      description:
-        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+      price: "₹3,500",
+      duration: "60 min",
       icon: <FaHandsHelping className="text-2xl text-emerald-600" />,
     },
     {
@@ -85,52 +87,82 @@ const Services = () => {
       images: [
         "https://th.bing.com/th/id/R.abea7d4761b28d14682dec341bd66167?rik=aga7An8M8fH95g&riu=http%3a%2f%2fwww.meleluz.com.br%2fwp-content%2fuploads%2f2014%2f10%2fchocolate_massage.jpg&ehk=rnYWzQqkjcO4loR2xuvJXIu7AgnT9sofoIgy%2b7DpoG8%3d&risl=&pid=ImgRaw&r=0",
       ], // Reference local image correctly
-      price: "₹3,500",
-      description:
-        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+      price: "₹2,500",
+      duration: "60 min",
       icon: <FaMugHot className="text-2xl text-emerald-600" />,
     },
     {
       title: "Wine & Vodka Massage",
       images: [wineVodka1], // Reference local image correctly
       price: "₹3,500",
-      description:
-        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+      duration: "60 min",
       icon: <FaWineBottle className="text-2xl text-emerald-600" />,
     },
     {
       title: "Body Polishing",
       images: [bodyPol1], // Reference local image correctly
-      price: "₹5,500",
-      description:
-        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+      price: "₹3,000",
+      duration: "30 min",
       icon: <FaCannabis className="text-2xl text-emerald-600" />,
     },
     {
       title: "Ubtan Massage",
       images: [ubtan1], // Reference local image correctly
-      price: "₹5,500",
-      description:
-        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+      price: "₹3,000",
+      duration: "60 min",
       icon: <FaSeedling className="text-2xl text-emerald-600" />,
     },
     {
       title: "Thai Massage",
       images: [thaimsg1], // Reference local image correctly
-      price: "₹5,500",
-      description:
-        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
+      price: "₹3,500",
+      duration: "60 min",
       icon: <FaDragon className="text-2xl text-emerald-600" />,
     },
     {
       title: "Potli Massage",
       images: [
+        "https://th.bing.com/th/id/OIP.U6ocsPOiFHd7gci7t_5gLgAAAA?rs=1&pid=ImgDetMain",
+      ],
+      price: "₹3,000",
+      duration: "60 min",
+      icon: <FaCentos className="text-2xl text-emerald-600" />,
+    },
+    {
+      title: "Foot Massage",
+      images: [
+        "https://northwichfootclinic.co.uk/wp-content/uploads/2021/08/thai-foot-massage-northwich-cheshire.jpg",
+      ],
+      price: "₹2,000",
+      duration: "30 min",
+      icon: <FaCentercode className="text-2xl text-emerald-600" />,
+    },
+    {
+      title: "Hot Stone Massage",
+      images: [
+        "https://img.grouponcdn.com/deal/g8JjckFez5dfRPwLXcju/jq-6143x3686/v1/c700x420.jpg",
+      ],
+      price: "₹2,000",
+      duration: "30 min",
+      icon: <FaAirFreshener className="text-2xl text-emerald-600" />,
+    },
+    {
+      title: "Ayurvedic Treatment Massage",
+      images: [
         "https://img.freepik.com/premium-photo/ayurvedic-massage-with-kizhi-herbal-bags-made-from-various-dried-herbs-wrapped-cotton_1048944-9494730.jpg",
       ],
+      price: "₹2,000",
+      duration: "30 min",
+      icon: <FaCloudscale className="text-2xl text-emerald-600" />,
+    },
+    {
+      title: "Couples Retreat Massage",
+      images: [
+        "https://media.istockphoto.com/id/1262423480/photo/romantic-date-in-spa-salon-with-relaxing-massage.jpg?s=612x612&w=0&k=20&c=eMigkxiHdKvYlKgWqfH7aPJ09Sph8eDUGfWJPwIvI8k=",
+      ],
       price: "₹5,500",
-      description:
-        "Share a relaxing experience with your loved one in our private suite with dual massages and complimentary refreshments.",
-      icon: <FaSpa className="text-2xl text-emerald-600" />,
+      duration: "60 min",
+      icon: <FaBed className="text-2xl text-emerald-600" />,
     },
   ];
   const handleServiceScroll = (title) => {
