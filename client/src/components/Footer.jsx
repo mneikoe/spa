@@ -3,7 +3,6 @@ import {
   FaSpa,
   FaFacebook,
   FaInstagram,
-  FaTwitter,
   FaMapMarkerAlt,
   FaPhone,
   FaEnvelope,
@@ -34,25 +33,18 @@ const Footer = () => (
           </p>
           <div className="flex space-x-4">
             <a
-              href="#"
+              href="https://www.facebook.com/share/18ky94Hg1a/"
               className="text-gray-400 hover:text-gold transition-colors duration-300"
               aria-label="Facebook"
             >
               <FaFacebook size={24} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/sukoon_spa.in?utm_source=qr&igsh=MWJoeWxxYXg0aDdscg=="
               className="text-gray-400 hover:text-gold transition-colors duration-300"
               aria-label="Instagram"
             >
               <FaInstagram size={24} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-gold transition-colors duration-300"
-              aria-label="Twitter"
-            >
-              <FaTwitter size={24} />
             </a>
           </div>
         </div>
