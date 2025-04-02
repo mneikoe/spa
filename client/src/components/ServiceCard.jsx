@@ -131,7 +131,7 @@ const ServiceCard = ({ id, title, duration, images, price }) => {
 
     const totalCost = Number(price) + cab; // Ensure price is a number
 
-    const message = `Hello Sukoon Spa,\n\nI would like to book the *${title}* service.\nService cost: ₹${price} (additional cab charges of ₹${cab} applicable).\n\nPlease share the available slots at your earliest convenience.\n\nThank you!`;
+    const message = `Hello Sukoon Spa,\n\nI would like to book the *${title}* service.\nService cost: ${price} (additional cab charges of ₹${cab} applicable).\n\nPlease share the available slots at your earliest convenience.\n\nThank you!`;
 
     const encodedMessage = encodeURIComponent(message);
 
