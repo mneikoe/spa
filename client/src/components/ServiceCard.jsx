@@ -123,13 +123,16 @@ const ServiceCard = ({ id, title, duration, images, price }) => {
 
     return () => observer.disconnect();
   }, [handleIntersection, id]); // Changed dependency to id instead of title
-
+  const cab = 299;
   const handleWhatsAppBooking = () => {
     const rawNumber = "9826451565";
     const countryCode = "91";
     const phoneNumber = `${countryCode}${rawNumber.replace(/\D/g, "")}`;
 
-    const message = `Hi SukoonSpa! I want to book the ${title} service (${price}).\nPlease let me know available slots.`;
+    const totalCost = Number(price) + cab; // Ensure price is a number
+
+    const message = `Hello Sukoon Spa,\n\nI would like to book the *${title}* service.\nService cost: ₹${price} (additional cab charges of ₹${cab} applicable).\n\nPlease share the available slots at your earliest convenience.\n\nThank you!`;
+
     const encodedMessage = encodeURIComponent(message);
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
