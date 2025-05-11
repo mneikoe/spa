@@ -29,7 +29,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const whatsappNumber = "9826451565"; // Replace with your WhatsApp number
+    const whatsappNumber = "6269036845"; // Replace with your WhatsApp number
     const serviceName = serviceOptions[formData.service] || formData.service;
 
     const message = encodeURIComponent(
@@ -86,7 +86,7 @@ const Contact = () => {
 
                 <div className="flex items-center">
                   <a
-                    href="tel:+919826451565"
+                    href="tel:+916269036845"
                     className="hover:text-gold transition-colors"
                     aria-label="Call us"
                   >
@@ -98,7 +98,7 @@ const Contact = () => {
                     <h4 className="font-semibold">
                       Phone(Click the Icon to place call)
                     </h4>
-                    <p className="text-gray-600">+91 9826451565</p>
+                    <p className="text-gray-600">+91 6269036845 </p>
                   </div>
                 </div>
                 <div className="flex items-center">

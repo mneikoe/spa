@@ -52,8 +52,8 @@ const SEO = () => (
             "postalCode": "462001",
             "addressCountry": "IN"
           },
-          "telephone": "+91 9876543210",
-          "priceRange": "₹₹₹",
+          "telephone": "+91 6269036845",
+          "priceRange": "₹2000 - ₹5000",
           "openingHours": "Mo-Su 09:00-21:00",
           "sameAs": [
             "https://www.facebook.com/luxuryspabhopal",

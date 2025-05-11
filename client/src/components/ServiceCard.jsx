@@ -125,7 +125,7 @@ const ServiceCard = ({ id, title, duration, images, price }) => {
   }, [handleIntersection, id]); // Changed dependency to id instead of title
   const cab = 299;
   const handleWhatsAppBooking = () => {
-    const rawNumber = "9826451565";
+    const rawNumber = "6269036845";
     const countryCode = "91";
     const phoneNumber = `${countryCode}${rawNumber.replace(/\D/g, "")}`;
 

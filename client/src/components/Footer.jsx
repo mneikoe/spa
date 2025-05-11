@@ -60,11 +60,11 @@ const Footer = () => (
             <li className="flex items-center">
               <FaPhone className="mr-2 text-gold" />
               <a
-                href="tel:+919826451565"
+                href="tel:+916269036845"
                 className="hover:text-gold transition-colors"
                 aria-label="Call us"
               >
-                +91 9826451565
+                +91 6269036845
               </a>
             </li>
             <li className="flex items-center">
